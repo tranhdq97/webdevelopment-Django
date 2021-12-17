@@ -1,0 +1,10 @@
+{% load static %}
+
+<h1>My Own Home Page</h1>
+
+<li><a class="nav-link scrollto active" href="/">Home</a></li>
+{% if user.is_authenticated %}
+<li><a class="nav-link scrollto active" href="logout">Logout</a></li>
+{% else %}
+<li><a class="nav-link scrollto active" href="login">Login or SignUp</a></li>
+{% endif %}
